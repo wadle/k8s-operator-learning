@@ -1,0 +1,20 @@
+# permissions for end users to view wadlek8s.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: wadlek8s-viewer-role
+rules:
+- apiGroups:
+  - wadlewebapp.k8s.wadle.io
+  resources:
+  - wadlek8s
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - wadlewebapp.k8s.wadle.io
+  resources:
+  - wadlek8s/status
+  verbs:
+  - get
