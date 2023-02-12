@@ -1,0 +1,7 @@
+apiVersion: wadlewebapp.k8s.wadle.io/v1
+kind: Wadlek8s
+metadata:
+  name: wadlek8s-sample
+spec:
+
+  replica: 3
